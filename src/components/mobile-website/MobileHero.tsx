@@ -1,33 +1,34 @@
-import { siteConfig, type Locale } from "../shared/config";
+import { MessageCircle } from "lucide-react";
+import { whatsappUrl, type Locale } from "../shared/config";
 import { getDictionary } from "../shared/i18n";
-import { Flower, HeroScene, Kite, Squiggle, Star, Sun, Wave } from "../shared/illustrations";
-import { MediaSlot } from "../shared/media-slot";
+import { HeroScene, Squiggle, Sun, Wave } from "../shared/illustrations";
+import { mediaAspect, MediaSlot } from "../shared/media-slot";
 import type { ImageFile } from "../shared/media-types";
 import { ButtonLink } from "../shared/ui";
 
 const chipTones = ["bg-sun", "bg-peach", "bg-mint"];
 
 export function MobileHero({ locale, photo }: { locale: Locale; photo: ImageFile | null }) {
-  const t = getDictionary(locale).hero;
+  const { hero: t, common } = getDictionary(locale);
   return (
-    <div className="relative overflow-clip">
-      <div className="shell-m relative pt-4 pb-9">
-        {/* Фото заходит за правый край экрана — иначе, чем на компьютере */}
-        <div className="bloom relative -mr-14 ml-8 aspect-[1/0.68]">
-          <div aria-hidden className="blob-b absolute -inset-3 rotate-3 bg-sun/70" />
-          <div className="blob-c relative h-full w-full overflow-hidden shadow-lift">
+    <div className="relative overflow-clip bg-linear-to-b from-sky to-sky-soft">
+      <div className="shell-m relative pt-6 pb-9">
+        {/* Фото во всю ширину экрана и в своих пропорциях, иначе, чем на компьютере */}
+        <div className="bloom relative mt-2">
+          <div aria-hidden className="absolute -inset-1.5 rotate-1 rounded-[2rem] bg-sun" />
+          <div
+            className="relative overflow-hidden rounded-[1.75rem] bg-milk shadow-lift ring-4 ring-milk"
+            style={{ aspectRatio: mediaAspect(photo) }}
+          >
             <MediaSlot
               media={photo}
               alt={t.photoAlt}
-              sizes="(min-width: 1024px) 540px, 100vw"
-              priority
-              focus={siteConfig.heroPhotoFocus}
+              sizes="(min-width: 1024px) 600px, 100vw"
+              preload
               fallback={<HeroScene role="img" aria-label={t.photoAlt} className="absolute inset-0 h-full w-full" />}
             />
           </div>
-          <Sun className="float-a absolute -top-2 -left-3 h-14 w-14" />
-          <Kite className="sway absolute -bottom-3 left-[-2.25rem] h-16 w-12" />
-          <Flower className="float-b absolute right-[22%] -bottom-4 h-9 w-9" />
+          <Sun className="float-a absolute -top-7 -right-3 h-14 w-14" />
         </div>
 
         <h1 className="rise mt-7 text-[clamp(2rem,8.6vw,3rem)] [--d:.05s]">
@@ -42,7 +43,7 @@ export function MobileHero({ locale, photo }: { locale: Locale; photo: ImageFile
         <ul className="rise mt-5 grid grid-cols-3 gap-2 [--d:.18s]">
           {t.stats.map((stat, i) => (
             <li key={stat.label} className={`rounded-[1.4rem_1rem_1.4rem_1rem] px-2.5 py-2.5 ${chipTones[i]}`}>
-              <span className="block font-display text-[1.5rem] leading-none font-semibold">{stat.value}</span>
+              <span className="block font-display text-[1.5rem] leading-none font-bold">{stat.value}</span>
               <span className="mt-1 block text-[0.82rem] leading-tight font-bold">{stat.label}</span>
             </li>
           ))}
@@ -50,9 +51,11 @@ export function MobileHero({ locale, photo }: { locale: Locale; photo: ImageFile
 
         <div className="rise mt-6 grid gap-2.5 [--d:.24s]">
           <ButtonLink href="#contacts" className="w-full">{t.contact}</ButtonLink>
-          <ButtonLink href="#about" tone="secondary" className="w-full">{t.about}</ButtonLink>
+          <ButtonLink href={whatsappUrl(locale)} external tone="whatsapp" className="w-full">
+            <MessageCircle className="h-5 w-5" aria-hidden />
+            {common.whatsapp}
+          </ButtonLink>
         </div>
-        <Star className="float-a absolute top-[58%] right-4 h-7 w-7" />
       </div>
       <Wave fill="var(--color-sun-soft)" variant={0} />
     </div>

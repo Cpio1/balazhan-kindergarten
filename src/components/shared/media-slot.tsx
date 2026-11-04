@@ -2,20 +2,24 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import type { MediaFile } from "./media-types";
 
+/** Пропорции рамки по самому файлу: так object-cover ничего не обрезает, в том числе лица. */
+export function mediaAspect(media: MediaFile | null, fallback = "4 / 3") {
+  if (media?.kind === "image") return `${media.width} / ${media.height}`;
+  return media?.kind === "video" ? "16 / 9" : fallback;
+}
+
 /** Показывает файл из public/images (фото или видео), а пока его нет — иллюстрацию. */
 export function MediaSlot({
   media,
   alt,
   sizes,
-  priority,
-  focus,
+  preload,
   fallback,
 }: {
   media: MediaFile | null;
   alt: string;
   sizes: string;
-  priority?: boolean;
-  focus?: string;
+  preload?: boolean;
   fallback: ReactNode;
 }) {
   if (!media) return <>{fallback}</>;
@@ -38,9 +42,8 @@ export function MediaSlot({
       alt={alt}
       fill
       sizes={sizes}
-      priority={priority}
+      preload={preload}
       className="object-cover"
-      style={focus ? { objectPosition: focus } : undefined}
     />
   );
 }

@@ -17,7 +17,7 @@ export function Logo({ logo, light = false }: { logo: ImageFile | null; light?: 
     );
   }
   return (
-    <span className={`inline-flex items-center gap-2 font-display text-[1.35rem] font-semibold ${light ? "text-milk" : "text-pine"}`}>
+    <span className={`inline-flex items-center gap-2 font-display text-[1.35rem] font-bold ${light ? "text-milk" : "text-pine"}`}>
       <Flower className="h-8 w-8 shrink-0" />
       <span>{siteConfig.name}</span>
     </span>

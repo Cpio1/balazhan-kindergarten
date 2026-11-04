@@ -3,7 +3,7 @@ import type { Locale } from "../shared/config";
 import { getDictionary } from "../shared/i18n";
 import { lessonIcons } from "../shared/lesson-icons";
 import { AboutScene, Star, Wave } from "../shared/illustrations";
-import { MediaSlot } from "../shared/media-slot";
+import { mediaAspect, MediaSlot } from "../shared/media-slot";
 import type { MediaFile } from "../shared/media-types";
 import { Reveal } from "../shared/motion";
 import { Eyebrow } from "../shared/ui";
@@ -18,7 +18,7 @@ export function MobileAbout({ locale, media }: { locale: Locale; media: MediaFil
           <h2 className="text-[1.75rem]">{t.title}</h2>
         </Reveal>
         <Reveal className="relative mt-6">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[4rem_1.5rem_4rem_1.5rem] shadow-soft">
+          <div className="relative overflow-hidden rounded-[1.75rem] shadow-soft" style={{ aspectRatio: mediaAspect(media) }}>
             <MediaSlot
               media={media}
               alt={t.mediaAlt}
@@ -26,7 +26,7 @@ export function MobileAbout({ locale, media }: { locale: Locale; media: MediaFil
               fallback={<AboutScene role="img" aria-label={t.mediaAlt} className="absolute inset-0 h-full w-full" />}
             />
           </div>
-          <Star className="float-a absolute -top-4 right-3 h-9 w-9" color="#F2947A" />
+          <Star className="float-a absolute -top-4 right-3 h-9 w-9" color="#F2643D" />
         </Reveal>
         <Reveal>
           <p className="mt-5 text-pine-muted">{t.body}</p>

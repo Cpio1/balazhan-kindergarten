@@ -116,7 +116,7 @@ export function MobileHeader({ locale, logo }: { locale: Locale; logo: ImageFile
                       href={`#${id}`}
                       onClick={close}
                       aria-current={active === id ? "true" : undefined}
-                      className={`flex min-h-13 w-fit items-center rounded-full px-4 font-display text-[1.6rem] font-semibold ${
+                      className={`flex min-h-13 w-fit items-center rounded-full px-4 font-display text-[1.6rem] font-bold ${
                         active === id ? "bg-sun" : ""
                       }`}
                     >

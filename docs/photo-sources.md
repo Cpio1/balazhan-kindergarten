@@ -1,0 +1,49 @@
+# Источники фотографий
+
+Все фотографии в `public/images/` взяты из галереи карточки Balazhan в 2ГИС (https://2gis.kz/almaty/firm/70000001035845615) без изменений и обрезки. Колонка «Загрузил» показывает раздел галереи: «От владельца» или «От пользователей».
+
+| Файл | Загрузил | Оригинал |
+| --- | --- | --- |
+| `main-page.jpg` | пользователь | https://i1.photo.2gis.com/photo-gallery/f1f5fec7-13a9-40ac-867e-35a8cb9a0fd5.jpg |
+| `main-page2.jpg` | владелец | https://i1.photo.2gis.com/images/branch/0/30258560080348010_3047.jpg |
+| `image1.jpg` | владелец | https://i6.photo.2gis.com/images/branch/0/30258560080348047_f807.jpg |
+| `image2.jpg` | пользователь | https://i0.photo.2gis.com/photo-gallery/fcbfde44-9527-4395-a282-a83a87d9f0fe.jpg |
+| `image3.jpg` | пользователь | https://i8.photo.2gis.com/photo-gallery/0a05f317-0fbf-44f1-a2fc-3f698f85e331.jpg |
+| `image4.jpg` | владелец | https://i3.photo.2gis.com/images/branch/0/30258560080348140_b6f2.jpg |
+| `image5.jpg` | пользователь | https://i1.photo.2gis.com/photo-gallery/b21ef0a2-ba0f-4784-86cd-73c4c136c4d5.jpg |
+| `image6.jpg` | пользователь | https://i8.photo.2gis.com/photo-gallery/e90723f0-166b-475c-8bfa-891e7db47bd7.jpg |
+| `image7.jpg` | пользователь | https://i0.photo.2gis.com/photo-gallery/ab1a87a8-7541-4bfb-9bac-f81083f7611a.jpg |
+| `image8.jpg` | пользователь | https://i0.photo.2gis.com/photo-gallery/31ff1e12-ef93-40e9-b97a-abde21b80a39.jpg |
+| `image9.jpg` | пользователь | https://i5.photo.2gis.com/photo-gallery/18ab3d58-185c-46e2-a4a2-7356487e81bb.jpg |
+| `image10.jpg` | пользователь | https://i8.photo.2gis.com/photo-gallery/cf4749fd-7fc8-4f69-999a-cac8403ae9db.jpg |
+| `image11.jpg` | владелец | https://i2.photo.2gis.com/images/branch/0/30258560080347998_deb2.jpg |
+| `image12.jpg` | пользователь | https://i8.photo.2gis.com/photo-gallery/46522960-7e76-4437-9c4a-1f524e95131a.jpg |
+| `image13.jpg` | пользователь | https://i9.photo.2gis.com/photo-gallery/a008b96e-11a8-4fb6-a342-9bcd76d380ca.jpg |
+| `image14.jpg` | пользователь | https://i9.photo.2gis.com/photo-gallery/142f5d18-2c31-46a6-a864-b1e46a212488.jpg |
+| `image15.jpg` | владелец | https://i0.photo.2gis.com/images/branch/0/30258560080348085_62b7.jpg |
+| `image16.jpg` | пользователь | https://i5.photo.2gis.com/photo-gallery/c59451e9-4312-4360-bc7b-4f628e12c557.jpg |
+| `image17.jpg` | пользователь | https://i9.photo.2gis.com/photo-gallery/188ad9b0-a3e6-4fd3-9a7c-a43cc5c17214.jpg |
+| `image18.jpg` | пользователь | https://i7.photo.2gis.com/photo-gallery/b9e50f71-9702-40b6-82b6-11177b21490b.jpg |
+| `image19.jpg` | пользователь | https://i0.photo.2gis.com/photo-gallery/352db059-d001-46e3-b7be-90ef7ab82fe9.jpg |
+| `image20.jpg` | пользователь | https://i2.photo.2gis.com/photo-gallery/14a2c4b1-2e8e-4030-b292-00d759575ab6.jpg |
+| `image21.jpg` | пользователь | https://i5.photo.2gis.com/photo-gallery/6b5d19bc-7f04-4082-8532-30ecae9dcd0b.jpg |
+| `image22.jpg` | пользователь | https://i3.photo.2gis.com/photo-gallery/2c31459b-1035-4bf2-8ee9-3ea02c6c01c0.jpg |
+| `image23.jpg` | пользователь | https://i2.photo.2gis.com/photo-gallery/24449149-c80a-43f0-9af7-77f53d978323.jpg |
+| `image24.jpg` | пользователь | https://i6.photo.2gis.com/photo-gallery/d7b5612c-4f0f-42a6-b9e3-cf2ffce2a522.jpg |
+| `image25.jpg` | владелец | https://i2.photo.2gis.com/images/branch/0/30258560080348428_90e2.jpg |
+| `image26.jpg` | пользователь | https://i5.photo.2gis.com/photo-gallery/ae8912af-73dc-4580-bc6e-a176e45b66e3.jpg |
+| `image27.jpg` | пользователь | https://i1.photo.2gis.com/photo-gallery/7f08d701-b5b7-48b1-a890-b54c249645ce.jpg |
+| `image28.jpg` | пользователь | https://i4.photo.2gis.com/photo-gallery/ba6e2260-628b-424f-acd4-0ce396d19f2e.jpg |
+| `image29.jpg` | пользователь | https://i3.photo.2gis.com/photo-gallery/4feb8a56-ca79-4795-b0bf-33cffe11138f.jpg |
+| `image30.jpg` | пользователь | https://i4.photo.2gis.com/photo-gallery/50f94c3a-3186-4bc5-9d68-1729e6b654ec.jpg |
+| `image31.jpg` | пользователь | https://i8.photo.2gis.com/photo-gallery/a273e6fa-50a1-4d5d-a5ed-763c42f91afe.jpg |
+| `image32.jpg` | пользователь | https://i1.photo.2gis.com/photo-gallery/067b74e4-c4a2-490a-994a-320efe5396a5.jpg |
+| `image33.jpg` | пользователь | https://i7.photo.2gis.com/photo-gallery/d09a2bef-2eab-43aa-9fe5-9b4ae83f503c.jpg |
+| `image34.jpg` | пользователь | https://i9.photo.2gis.com/photo-gallery/b395b7f1-3d6f-429f-aad9-77ee0fcd3f3a.jpg |
+| `image35.jpg` | пользователь | https://i6.photo.2gis.com/photo-gallery/9ea02520-9c9f-41c3-805c-f34818172fef.jpg |
+| `image36.jpg` | владелец | https://i5.photo.2gis.com/images/branch/0/30258560080348375_31ae.jpg |
+| `image37.jpg` | пользователь | https://i2.photo.2gis.com/photo-gallery/efb3b2ae-c20e-44dc-be0f-802392bf2f12.jpg |
+| `image38.jpg` | пользователь | https://i2.photo.2gis.com/photo-gallery/5692c253-23b7-4b22-a473-1c65d81e3757.jpg |
+| `image39.jpg` | пользователь | https://i3.photo.2gis.com/photo-gallery/f4ab4125-0686-4840-991c-7690bb4eef43.jpg |
+| `image40.jpg` | пользователь | https://i3.photo.2gis.com/photo-gallery/b70b9c8d-49cc-406e-9790-d0784185876b.jpg |
+| `image41.jpg` | владелец | https://i8.photo.2gis.com/images/branch/0/30258560080348323_3d3d.jpg |

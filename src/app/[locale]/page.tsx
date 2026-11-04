@@ -73,7 +73,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         />
         <DualSection
           id="about"
-          desktop={<About locale={locale} media={media.aboutMedia} secondary={media.gallery[0] ?? null} />}
+          desktop={<About locale={locale} media={media.aboutMedia} />}
           mobile={<MobileAbout locale={locale} media={media.aboutMedia} />}
         />
         <DualSection id="groups" desktop={<Groups locale={locale} />} mobile={<MobileGroups locale={locale} />} />

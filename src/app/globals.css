@@ -2,22 +2,26 @@
 
 @theme {
   --color-milk: #fffdf7;
-  --color-mint: #a8dcc8;
-  --color-sun: #ffd978;
-  --color-peach: #ffbda7;
-  --color-pine: #244a40;
-  --color-mint-soft: #e6f5ee;
-  --color-sun-soft: #fff5d6;
-  --color-peach-soft: #ffeee7;
-  --color-pine-muted: #47665d;
-  --color-pine-deep: #1b3a32;
+  --color-mint: #5fd9b4;
+  --color-sun: #ffc933;
+  --color-peach: #ff9a76;
+  --color-coral: #d63a1c;
+  --color-coral-deep: #b52e14;
+  --color-sky: #8fdcff;
+  --color-pine: #17404a;
+  --color-mint-soft: #dcf8ee;
+  --color-sun-soft: #fff0bf;
+  --color-peach-soft: #ffe3d7;
+  --color-sky-soft: #dff5ff;
+  --color-pine-muted: #365a64;
+  --color-pine-deep: #0f2e36;
 
-  --shadow-soft: 0 18px 40px -22px rgb(36 74 64 / 0.32);
-  --shadow-lift: 0 26px 50px -24px rgb(36 74 64 / 0.42);
+  --shadow-soft: 0 18px 40px -22px rgb(23 64 74 / 0.4);
+  --shadow-lift: 0 26px 50px -24px rgb(23 64 74 / 0.5);
 }
 
 @theme inline {
-  --font-display: var(--font-lora), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-rubik), system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-sans: var(--font-nunito), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -46,7 +50,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.16;
   letter-spacing: -0.01em;
   text-wrap: balance;

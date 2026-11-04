@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Lora, Nunito } from "next/font/google";
+import { Nunito, Rubik } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { locales, localePath, siteConfig, siteUrl, type Locale } from "@/components/shared/config";
@@ -8,7 +8,7 @@ import { MotionProvider } from "@/components/shared/motion";
 import "../globals.css";
 
 // Подмножество cyrillic-ext содержит казахские буквы ә ғ қ ң ө ұ ү һ.
-const lora = Lora({ subsets: ["latin", "cyrillic", "cyrillic-ext"], variable: "--font-lora", display: "swap" });
+const rubik = Rubik({ subsets: ["latin", "cyrillic", "cyrillic-ext"], variable: "--font-rubik", display: "swap" });
 const nunito = Nunito({ subsets: ["latin", "cyrillic", "cyrillic-ext"], variable: "--font-nunito", display: "swap" });
 
 type Params = { params: Promise<{ locale: string }> };
@@ -21,7 +21,7 @@ export function generateStaticParams() {
 
 const isLocale = (value: string): value is Locale => (locales as readonly string[]).includes(value);
 
-export const viewport: Viewport = { themeColor: "#FFFDF7" };
+export const viewport: Viewport = { themeColor: "#8FDCFF" };
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
@@ -54,7 +54,7 @@ export default async function LocaleLayout({ children, params }: Params & { chil
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   return (
-    <html lang={locale} className={`${lora.variable} ${nunito.variable}`}>
+    <html lang={locale} className={`${rubik.variable} ${nunito.variable}`}>
       <body>
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>

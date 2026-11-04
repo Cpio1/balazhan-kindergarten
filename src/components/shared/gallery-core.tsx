@@ -51,13 +51,8 @@ export function distribute<T extends { width: number; height: number }>(items: T
   return result;
 }
 
-const thumbShapes = [
-  "rounded-[2.5rem_1rem_2.5rem_1rem]",
-  "rounded-[1rem_2.5rem_1rem_2.5rem]",
-  "rounded-[2rem]",
-  "rounded-[3rem_1.5rem_2rem_1.5rem]",
-  "rounded-[1.5rem_2rem_3rem_1.5rem]",
-];
+// Скругления небольшие: углы рамки не должны срезать лица на групповых фото.
+const thumbShapes = ["rounded-[1.5rem]", "rounded-[1.25rem_1.75rem_1.25rem_1.75rem]", "rounded-[1.75rem_1.25rem_1.75rem_1.25rem]"];
 
 export function PhotoThumb({
   image,

@@ -1,4 +1,4 @@
-import { Clock, MapPin, MessageCircle, Navigation, Phone, SquareArrowOutUpRight } from "lucide-react";
+import { AtSign, Clock, MapPin, MessageCircle, Navigation, Phone, SquareArrowOutUpRight } from "lucide-react";
 import { siteConfig, telUrl, whatsappUrl, type Locale } from "../shared/config";
 import { getDictionary } from "../shared/i18n";
 import { Wave } from "../shared/illustrations";
@@ -15,7 +15,7 @@ export function MobileContacts({ locale }: { locale: Locale }) {
       <div className="on-dark bg-pine text-milk">
         <div className="shell-m pt-8 pb-10">
           <Reveal>
-            <p className="font-display text-[1.15rem] font-semibold text-sun">{siteConfig.name}</p>
+            <p className="font-display text-[1.15rem] font-bold text-sun">{siteConfig.name}</p>
             <h2 className="mt-0.5 text-[1.85rem]">{t.title}</h2>
           </Reveal>
 
@@ -39,6 +39,13 @@ export function MobileContacts({ locale }: { locale: Locale }) {
               </div>
             </div>
             <div className="flex gap-3">
+              <AtSign className="mt-1 h-5 w-5 shrink-0 text-sun" aria-hidden />
+              <div>
+                <p className="text-sm font-bold text-mint">{t.instagramLabel}</p>
+                <p>{siteConfig.instagram}</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
               <Clock className="mt-1 h-5 w-5 shrink-0 text-sun" aria-hidden />
               <div>
                 <p className="text-sm font-bold text-mint">{t.hoursLabel}</p>
@@ -54,15 +61,10 @@ export function MobileContacts({ locale }: { locale: Locale }) {
                 <Navigation className="h-5 w-5" aria-hidden />
                 {t.route}
               </ButtonLink>
-              <a
-                href={siteConfig.twoGis.card}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-11 items-center justify-center gap-2 font-bold text-mint underline underline-offset-4"
-              >
+              <ButtonLink href={siteConfig.twoGis.card} external tone="sun" className="w-full">
+                <SquareArrowOutUpRight className="h-5 w-5" aria-hidden />
                 {t.openCard}
-                <SquareArrowOutUpRight className="h-4 w-4" aria-hidden />
-              </a>
+              </ButtonLink>
             </div>
           </Reveal>
         </div>

@@ -13,15 +13,15 @@ const svg = (viewBox: string, props: P) => ({
 
 const C = {
   milk: "#FFFDF7",
-  mint: "#A8DCC8",
-  mintSoft: "#E6F5EE",
-  mintDeep: "#6FBFA3",
-  sun: "#FFD978",
+  mint: "#5FD9B4",
+  mintSoft: "#DCF8EE",
+  mintDeep: "#2FBF95",
+  sun: "#FFC933",
   sunDeep: "#F7BE4F",
-  peach: "#FFBDA7",
-  peachDeep: "#F2947A",
-  pine: "#244A40",
-  leaf: "#3F7F6B",
+  peach: "#FF9A76",
+  peachDeep: "#F2643D",
+  pine: "#17404A",
+  leaf: "#1F8A7A",
 };
 
 export const Sun = (p: P) => (

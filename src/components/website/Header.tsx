@@ -27,7 +27,7 @@ export function Header({ locale, logo }: { locale: Locale; logo: ImageFile | nul
                     href={`#${id}`}
                     aria-current={active === id ? "true" : undefined}
                     className={`block rounded-full px-3 py-2 text-[0.95rem] leading-tight font-bold whitespace-nowrap transition-colors xl:px-3.5 ${
-                      active === id ? "bg-sun-soft text-pine" : "text-pine-muted hover:bg-mint-soft hover:text-pine"
+                      active === id ? "bg-sun text-pine" : "text-pine-muted hover:bg-mint-soft hover:text-pine"
                     }`}
                   >
                     {t.nav[id]}

@@ -49,7 +49,7 @@ export function Gallery({ locale, images }: { locale: Locale; images: ImageFile[
                 <button
                   type="button"
                   onClick={g.showMore}
-                  className="btn-motion inline-flex min-h-13 items-center gap-2 rounded-full bg-pine px-8 font-bold text-milk shadow-soft"
+                  className="btn-motion inline-flex min-h-13 items-center gap-2 rounded-full bg-coral px-8 font-bold text-white shadow-soft"
                 >
                   <Plus className="h-5 w-5" aria-hidden />
                   {t.more}

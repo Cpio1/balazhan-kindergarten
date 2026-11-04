@@ -54,7 +54,7 @@ export function MobileGallery({ locale, images }: { locale: Locale; images: Imag
               <button
                 type="button"
                 onClick={g.showMore}
-                className="btn-motion mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-pine font-bold text-milk"
+                className="btn-motion mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-coral font-bold text-white"
               >
                 <Plus className="h-5 w-5" aria-hidden />
                 {t.more}

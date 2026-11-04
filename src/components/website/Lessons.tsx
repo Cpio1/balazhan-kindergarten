@@ -14,7 +14,7 @@ const tiles = [
 ];
 
 const specialStyles = [
-  { bg: "bg-mint", icon: "float-a", shape: "rounded-[3.5rem_1.5rem_2.5rem_1.5rem]", Deco: Star, decoColor: "#FFD978" },
+  { bg: "bg-mint", icon: "float-a", shape: "rounded-[3.5rem_1.5rem_2.5rem_1.5rem]", Deco: Star, decoColor: "#FFC933" },
   { bg: "bg-peach", icon: "sway", shape: "rounded-[1.5rem_3.5rem_1.5rem_2.5rem]", Deco: Flower, decoColor: "#FFFDF7" },
 ];
 

@@ -2,47 +2,35 @@ import { CalendarClock, Languages, Smile, Soup, Users } from "lucide-react";
 import type { Locale } from "../shared/config";
 import { getDictionary } from "../shared/i18n";
 import { lessonIcons } from "../shared/lesson-icons";
-import { AboutScene, Flower, HeroScene, Star, Wave } from "../shared/illustrations";
-import { MediaSlot } from "../shared/media-slot";
-import type { ImageFile, MediaFile } from "../shared/media-types";
+import { AboutScene, Flower, Star, Wave } from "../shared/illustrations";
+import { mediaAspect, MediaSlot } from "../shared/media-slot";
+import type { MediaFile } from "../shared/media-types";
 import { Reveal } from "../shared/motion";
 import { Eyebrow } from "../shared/ui";
 
 const factIcons = [Languages, Smile, Users, Soup, CalendarClock];
 const factTones = ["bg-mint", "bg-peach", "bg-sun", "bg-mint", "bg-peach"];
 
-export function About({
-  locale,
-  media,
-  secondary,
-}: {
-  locale: Locale;
-  media: MediaFile | null;
-  secondary: ImageFile | null;
-}) {
+export function About({ locale, media }: { locale: Locale; media: MediaFile | null }) {
   const t = getDictionary(locale).about;
   return (
     <div className="bg-sun-soft">
-      <div className="shell grid grid-cols-[1fr_1.05fr] items-center gap-16 py-20">
-        <Reveal className="relative pr-8 pb-14">
-          <div className="arch relative aspect-[5/6] overflow-hidden shadow-lift">
+      <div className="shell grid grid-cols-[1.08fr_1fr] items-start gap-16 py-20">
+        <Reveal className="sticky top-28">
+          <div aria-hidden className="absolute -inset-3 -rotate-2 rounded-[2.75rem] bg-peach" />
+          <div
+            className="relative overflow-hidden rounded-[2.25rem] bg-milk shadow-lift ring-8 ring-milk"
+            style={{ aspectRatio: mediaAspect(media) }}
+          >
             <MediaSlot
               media={media}
               alt={t.mediaAlt}
-              sizes="(min-width: 1024px) 480px, 100vw"
+              sizes="(min-width: 1180px) 560px, 48vw"
               fallback={<AboutScene role="img" aria-label={t.mediaAlt} className="absolute inset-0 h-full w-full" />}
             />
           </div>
-          <div className="blob-a absolute right-0 bottom-0 h-44 w-44 overflow-hidden shadow-lift ring-8 ring-sun-soft">
-            <MediaSlot
-              media={secondary}
-              alt=""
-              sizes="176px"
-              fallback={<HeroScene className="absolute inset-0 h-full w-full" />}
-            />
-          </div>
-          <Flower className="float-a absolute -top-3 -left-5 h-16 w-16" />
-          <Star className="float-b absolute top-[38%] -right-1 h-10 w-10" color="#F2947A" />
+          <Flower className="float-a absolute -top-9 -left-7 h-16 w-16" />
+          <Star className="float-b absolute -right-6 -bottom-6 h-12 w-12" color="#F2643D" />
         </Reveal>
 
         <div>

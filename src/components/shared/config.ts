@@ -47,6 +47,9 @@ export const siteConfig = {
 
   facts: { groups: 3, ageFrom: 2, ageTo: 5, meals: 5 },
 
+  /** Название в Instagram. Точной ссылки на профиль пока нет, поэтому показываем его текстом. */
+  instagram: "Balazhan.kz",
+
   twoGis: {
     firmId,
     card: `https://2gis.kz/almaty/firm/${firmId}`,
@@ -115,9 +118,6 @@ export const siteConfig = {
     initialCount: 6,
     step: 6,
   },
-
-  /** Какую часть главной фотографии держать в центре круглой рамки (CSS object-position) */
-  heroPhotoFocus: "50% 50%",
 };
 
 export const whatsappUrl = (locale: Locale) =>

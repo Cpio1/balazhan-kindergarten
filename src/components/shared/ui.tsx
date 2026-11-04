@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 type Tone = "primary" | "secondary" | "sun" | "whatsapp" | "ghost-light";
 
 const tones: Record<Tone, string> = {
-  primary: "bg-pine text-milk shadow-soft hover:bg-pine-deep",
-  secondary: "bg-milk text-pine ring-2 ring-pine/80 ring-inset hover:bg-sun-soft",
+  primary: "bg-coral text-white shadow-soft hover:bg-coral-deep",
+  secondary: "bg-milk text-pine ring-2 ring-pine ring-inset hover:bg-sun-soft",
   sun: "bg-sun text-pine shadow-soft",
-  whatsapp: "bg-mint text-pine shadow-soft",
+  whatsapp: "bg-[#25D366] text-pine-deep shadow-soft",
   "ghost-light": "bg-transparent text-milk ring-2 ring-milk/70 ring-inset hover:bg-milk/10",
 };
 

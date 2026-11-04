@@ -1,4 +1,4 @@
-import { Clock, MapPin, MessageCircle, Navigation, Phone, SquareArrowOutUpRight } from "lucide-react";
+import { AtSign, Clock, MapPin, MessageCircle, Navigation, Phone, SquareArrowOutUpRight } from "lucide-react";
 import { siteConfig, telUrl, whatsappUrl, type Locale } from "../shared/config";
 import { getDictionary } from "../shared/i18n";
 import { Flower, Star, Wave } from "../shared/illustrations";
@@ -20,6 +20,7 @@ export function Contacts({ locale }: { locale: Locale }) {
         </a>
       ),
     },
+    { Icon: AtSign, label: t.instagramLabel, body: <p>{siteConfig.instagram}</p> },
     { Icon: Clock, label: t.hoursLabel, body: <p>{siteConfig.hours.label[locale]}</p> },
   ];
 
@@ -31,7 +32,7 @@ export function Contacts({ locale }: { locale: Locale }) {
         <Flower className="float-b absolute bottom-10 left-[3%] h-12 w-12" />
         <div className="shell relative grid grid-cols-[1fr_1.15fr] items-stretch gap-12 pt-14 pb-20">
           <Reveal>
-            <p className="font-display text-[1.25rem] font-semibold text-sun">{siteConfig.name}</p>
+            <p className="font-display text-[1.25rem] font-bold text-sun">{siteConfig.name}</p>
             <h2 className="mt-1 text-[clamp(2rem,3vw,2.7rem)]">{t.title}</h2>
             <dl className="mt-7 space-y-5">
               {rows.map(({ Icon, label, body }) => (
@@ -55,20 +56,15 @@ export function Contacts({ locale }: { locale: Locale }) {
                 <Navigation className="h-5 w-5" aria-hidden />
                 {t.route}
               </ButtonLink>
+              <ButtonLink href={siteConfig.twoGis.card} external tone="ghost-light">
+                <SquareArrowOutUpRight className="h-5 w-5" aria-hidden />
+                {t.openCard}
+              </ButtonLink>
             </div>
           </Reveal>
 
           <Reveal delay={0.1} className="flex flex-col">
             <MapFrame title={t.mapTitle} className="min-h-[420px] flex-1 rounded-[5rem_2rem_2rem_2rem]" />
-            <a
-              href={siteConfig.twoGis.card}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3.5 inline-flex items-center gap-2 self-end font-bold text-mint underline-offset-4 hover:underline"
-            >
-              {t.openCard}
-              <SquareArrowOutUpRight className="h-4 w-4" aria-hidden />
-            </a>
           </Reveal>
         </div>
       </div>
