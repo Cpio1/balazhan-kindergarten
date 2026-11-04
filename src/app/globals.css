@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  --color-milk: #fffdf7;
+  --color-mint: #a8dcc8;
+  --color-sun: #ffd978;
+  --color-peach: #ffbda7;
+  --color-pine: #244a40;
+  --color-mint-soft: #e6f5ee;
+  --color-sun-soft: #fff5d6;
+  --color-peach-soft: #ffeee7;
+  --color-pine-muted: #47665d;
+  --color-pine-deep: #1b3a32;
+
+  --shadow-soft: 0 18px 40px -22px rgb(36 74 64 / 0.32);
+  --shadow-lift: 0 26px 50px -24px rgb(36 74 64 / 0.42);
+}
+
+@theme inline {
+  --font-display: var(--font-lora), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-nunito), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  background: var(--color-milk);
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--color-milk);
+  color: var(--color-pine);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-pine);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--color-sun);
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+/* Контейнер: на ноутбуках контент не растягивается и не выглядит слишком крупным */
+.shell {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 4vw, 3rem);
+}
+
+.shell-m {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Органические формы */
+.blob-a {
+  border-radius: 58% 42% 46% 54% / 52% 46% 54% 48%;
+}
+.blob-b {
+  border-radius: 44% 56% 62% 38% / 56% 42% 58% 44%;
+}
+.blob-c {
+  border-radius: 63% 37% 41% 59% / 41% 58% 42% 59%;
+}
+.leaf-a {
+  border-radius: 3.25rem 1.25rem 3.25rem 1.25rem;
+}
+.leaf-b {
+  border-radius: 1.25rem 3.25rem 1.25rem 3.25rem;
+}
+.arch {
+  border-radius: 9rem 9rem 2rem 2rem;
+}
+.pebble {
+  border-radius: 2.5rem 3.5rem 2rem 3rem / 3rem 2rem 3.5rem 2.5rem;
+}
+
+/* Лёгкие CSS-анимации: работают на видеокарте и не нагружают телефон */
+@keyframes float-a {
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+@keyframes float-b {
+  50% {
+    transform: translateY(8px) rotate(-4deg);
+  }
+}
+@keyframes sway {
+  50% {
+    transform: rotate(6deg);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+@keyframes bloom {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .float-a {
+    animation: float-a 7s ease-in-out infinite;
+  }
+  .float-b {
+    animation: float-b 8.5s ease-in-out infinite;
+  }
+  .sway {
+    animation: sway 6s ease-in-out infinite;
+    transform-origin: 50% 90%;
+  }
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--d, 0s);
+  }
+  .bloom {
+    animation: bloom 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--d, 0s);
+  }
+  .fade-swap {
+    transition: opacity 0.25s ease;
+  }
+  .btn-motion {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+  .card-motion {
+    transition:
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.3s ease;
+  }
+}
+
+@media (hover: hover) {
+  .btn-motion:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+  .card-motion:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+.btn-motion:active {
+  transform: translateY(0);
+}
+
+/* Просмотр фотографий */
+dialog.lightbox {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgb(18 40 34 / 0.95);
+  color: var(--color-milk);
+  overscroll-behavior: contain;
+}
+dialog.lightbox::backdrop {
+  background: rgb(18 40 34 / 0.95);
+}
