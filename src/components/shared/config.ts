@@ -68,7 +68,7 @@ export const siteConfig = {
    * Google Drive сілтемесі. Бос болса, сайт «Жақында қолжетімді болады» деп көрсетеді.
    * Вставьте сюда ссылку на папку Google Drive — кнопка «Посмотреть документы» заработает сама.
    */
-  documentsUrl: "",
+  documentsUrl: "https://drive.google.com/drive/folders/1Jwugy90C3UOd216fEQnMMAPqQWL0r2Fk",
 
   /**
    * Предварительные названия и возраст групп — это не подтверждённое расписание сада.
